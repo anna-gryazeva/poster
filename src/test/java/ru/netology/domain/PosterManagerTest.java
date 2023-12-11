@@ -16,7 +16,7 @@ public class PosterManagerTest {
         manager.addingPoster("Человек - невидимка");
 
         String[] expected = {"Бладшот", "Вперёд", "Отель <<Белград>>", "Джентельмены", "Человек - невидимка"};
-        String [] actual = manager.findAll();
+        String[] actual = manager.findAll();
         Assertions.assertArrayEquals(expected, actual);
     }
 
@@ -34,7 +34,7 @@ public class PosterManagerTest {
 
         String[] expected = {"Бладшот", "Вперёд", "Отель <<Белград>>", "Джентельмены", "Человек - невидимка",
                 "Тролли.Мировой тур", "Номер один"};
-        String [] actual = manager.findAll();
+        String[] actual = manager.findAll();
         Assertions.assertArrayEquals(expected, actual);
 
     }
@@ -65,20 +65,20 @@ public class PosterManagerTest {
 
     @Test
     public void findLast() {
-    PosterManager manager = new PosterManager();
+        PosterManager manager = new PosterManager();
         manager.addingPoster("Вперёд");
         manager.addingPoster("Отель <<Белград>>");
         manager.addingPoster("Джентельмены");
         manager.addingPoster("Человек - невидимка");
         manager.addingPoster("Тролли.Мировой тур");
 
-        String[] expected = {"Тролли.Мировой тур","Человек - невидимка","Джентельмены","Отель <<Белград>>","Вперёд" };
+        String[] expected = {"Тролли.Мировой тур", "Человек - невидимка", "Джентельмены", "Отель <<Белград>>", "Вперёд"};
         String[] actual = manager.findLast();
-        Assertions.assertArrayEquals(expected,actual);
+        Assertions.assertArrayEquals(expected, actual);
     }
 
     @Test
-    public  void findLast1() {
+    public void findLast1() {
         PosterManager manager = new PosterManager(3);
 
         manager.addingPoster("Бладшот");
@@ -87,9 +87,9 @@ public class PosterManagerTest {
         manager.addingPoster("Джентельмены");
         manager.addingPoster("Человек - невидимка");
 
-        String[] expected = {"Человек - невидимка","Джентельмены","Отель <<Белград>>"};
+        String[] expected = {"Человек - невидимка", "Джентельмены", "Отель <<Белград>>"};
         String[] actual = manager.findLast();
-        Assertions.assertArrayEquals(expected,actual);
+        Assertions.assertArrayEquals(expected, actual);
     }
 
     @Test
@@ -102,7 +102,7 @@ public class PosterManagerTest {
 
         String[] expected = {"Отель <<Белград>>", "Вперёд", "Бладшот"};
         String[] actual = manager.findLast();
-        Assertions.assertArrayEquals(expected,actual);
+        Assertions.assertArrayEquals(expected, actual);
 
     }
 }

@@ -1,4 +1,5 @@
 package ru.netology.domain;
+
 public class PosterManager {
     private String[] poster = new String[0];
     private int limit;
@@ -29,12 +30,12 @@ public class PosterManager {
         int resultLength;
         if (poster.length < limit) {
             resultLength = poster.length;
-        }else {
+        } else {
             resultLength = limit;
         }
         String[] tmp = new String[resultLength];
         for (int i = 0; i < tmp.length; i++) {
-            tmp[i] = poster[poster.length -1 -i];
+            tmp[i] = poster[poster.length - 1 - i];
         }
         return tmp;
     }
